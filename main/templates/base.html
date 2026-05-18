@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Funky Flower Shop - Premier florist in Huntington and NYC for weddings, sympathy, and artisan designs.">
+    <title>{% block title %}The Funky Flower | Bespoke Floristry{% endblock %}</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div><i class="fas fa-shipping-fast"></i> Delivery to Huntington & NYC</div>
+        <div class="desktop-only">Call Us: (631) 421-4410</div>
+    </div>
+
+    <nav class="main-nav">
+    <div class="nav-container">
+        <!-- Brand Logo -->
+        <div class="logo-container">
+            <a href="/"><img src="{% static 'images/funky.jpeg' %}" alt="The Funky Flower"></a>
+        </div>
+
+        <!-- Mobile Trigger -->
+        <div class="mobile-toggle" id="mobile-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="nav-menu">
+            <!-- SHOP BY FLOWERS (Mega-Menu Style) -->
+            <li class="has-dropdown">
+                <a href="#">Flowers <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Roses</a></li>
+                    <li><a href="#">Lilies</a></li>
+                    <li><a href="#">Tulips</a></li>
+                    <li><a href="#">Sunflowers</a></li>
+                    <li><a href="#">Orchids</a></li>
+                    <li><a href="#">Mixed Bouquets</a></li>
+                </ul>
+            </li>
+
+            <!-- OCCASIONS -->
+            <li class="has-dropdown">
+                <a href="#">Occasions <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Birthday</a></li>
+                    <li><a href="#">Sympathy & Funeral</a></li>
+                    <li><a href="#">Anniversary</a></li>
+                    <li><a href="#">Get Well</a></li>
+                    <li><a href="#">New Baby</a></li>
+                    <li><a href="#">Just Because</a></li>
+                </ul>
+            </li>
+
+            <!-- PLANTS & GIFTS -->
+            <li class="has-dropdown">
+                <a href="#">Gifts <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Indoor Plants</a></li>
+                    <li><a href="#">Succulents</a></li>
+                    <li><a href="#">Gift Baskets</a></li>
+                    <li><a href="#">Chocolates & Balloons</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Weddings</a></li>
+            <li><a href="#">Same Day Delivery</a></li>
+
+            <!-- UTILITY ICONS -->
+            <li class="nav-utilities">
+                <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="nav-icon cart-trigger">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px;">
+            <div>
+                <h3>Huntington Studio</h3>
+                <p>386 New York Avenue<br>Huntington, NY 11743</p>
+                <p>(631) 421-4410</p>
+            </div>
+            <div>
+                <h3>NYC Studio</h3>
+                <p>1677 Lexington Avenue<br>New York, NY 10029</p>
+                <p>(917) 455-8902</p>
+            </div>
+            <div>
+                <h3>Follow Our Bloom</h3>
+                <div style="display:flex; gap: 20px; font-size: 1.5rem; margin-top: 15px;">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem;">
+            &copy; 2026 The Funky Flower Shop. Designed by <a href="https://quantumcoresoftware.com/" class="btn-secondary text-decoration-none">Quantum Core Software</a>.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

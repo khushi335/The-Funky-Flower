@@ -1,0 +1,1075 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Carousel Section -->
+<section class="hero-section">
+    <div class="hero-carousel">
+        <div class="hero-slide" style="background-image: url('{% static 'images/hero1.jpg' %}');">
+            <div class="hero-content">
+                <p>Eclectic & Artistic</p>
+                <h1>The Funky Flower</h1>
+                <a href="#" class="btn-rose">Shop Signature Designs</a>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('{% static 'images/hero2.jpg' %}');">
+            <div class="hero-content">
+                <p>Timeless & Graceful</p>
+                <h1>Curated Occasions</h1>
+                <a href="#" class="btn-rose">Browse Collection</a>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('{% static 'images/hero3.jpg' %}');">
+            <div class="hero-content">
+                <p>Huntington & NYC Studio</p>
+                <h1>Luxury Delivered</h1>
+                <a href="#" class="btn-rose">Same-Day Delivery</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-section">
+    <div class="about-container">
+        <!-- Content Side -->
+        <div class="about-content">
+            <span class="sub-heading">Our Story</span>
+            <h2 class="about-title">Bespoke Floristry with a <span class="accent-text">Funky</span> Edge</h2>
+            <p class="about-description">
+                The Funky Flower Shop is a full-range florist dedicated to providing personal attention and the highest quality blooms. From our studios in Huntington and NYC, we craft arrangements that are as unique as the individuals who receive them.
+            </p>
+            
+            <div class="about-features">
+                <div class="feature-item">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <h4>Artisan Quality</h4>
+                        <p>Hand-selected, fresh seasonal blooms for every design.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Two Iconic Studios</h4>
+                        <p>Serving the vibrant communities of Huntington and Manhattan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn-about">Meet the Team</a>
+        </div>
+
+        <!-- Visual Side -->
+        <div class="about-visual">
+            <div class="image-stack">
+                <img src="{% static 'images/about-main.jpg' %}" alt="Flower Arrangement" class="img-large">
+                <div class="image-overlay-box">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-text">Years of Artistic Bloom</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-choose-us">
+    <div class="container">
+        <div class="section-header">
+            <span class="sub-heading">The Funky Flower Difference</span>
+            <h2 class="section-title">Why Choose Our Blooms?</h2>
+            <p class="section-subtitle">We combine over 20 years of artistic expertise with a passion for high-quality, bespoke floristry.</p>
+        </div>
+
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Bespoke Artistry</h3>
+                <p>Every arrangement is uniquely "funky," crafted with personal attention to tell your specific story.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Premium Quality</h3>
+                <p>We use only the highest quality, vibrant blooms, ensuring your flowers are fresh and long-lasting.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fas fa-truck-loading"></i>
+                </div>
+                <h3>Dual Studio Service</h3>
+                <p>With studios in Huntington and NYC, we offer specialized luxury delivery across both regions.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Client Focused</h3>
+                <p>We pride ourselves on special, personal attention for all of life's most meaningful occasions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Season Section -->
+<section class="section-padding">
+    <div style="text-align: center; margin-bottom: 60px;">
+        <h2 style="font-size: 3.5rem;">The Season's Best</h2>
+        <p style="color: var(--text-soft); font-style: italic;">Artistry in every petal, delivered to your door.</p>
+    </div>
+
+    <div class="category-grid">
+        <div class="category-card">
+            <img src="{% static 'images/shop-occ.jpg' %}" alt="Occasions">
+            <h3>Occasions</h3>
+            <p style="padding: 10px 20px; color: var(--text-soft);">Celebrate life's big moments.</p>
+            <a href="#" style="color: var(--primary); font-weight: bold; text-decoration: none; display: block; padding: 15px;">Shop Now →</a>
+        </div>
+        <div class="category-card">
+            <img src="{% static 'images/shop-sym.jpg' %}" alt="Sympathy">
+            <h3>Sympathy</h3>
+            <p style="padding: 10px 20px; color: var(--text-soft);">Graceful tributes and gifts.</p>
+            <a href="#" style="color: var(--primary); font-weight: bold; text-decoration: none; display: block; padding: 15px;">Browse →</a>
+        </div>
+        <div class="category-card">
+            <img src="{% static 'images/shop-wed.jpg' %}" alt="Weddings">
+            <h3>Weddings</h3>
+            <p style="padding: 10px 20px; color: var(--text-soft);">Bespoke floral event styling.</p>
+            <a href="#" style="color: var(--primary); font-weight: bold; text-decoration: none; display: block; padding: 15px;">Learn More →</a>
+        </div>
+    </div>
+</section>
+
+<section class="nyc-service-section">
+    <div class="container">
+        <div class="service-flex">
+            <!-- Text Content -->
+            <div class="service-text">
+                <span class="sub-heading">New York's Artisan Florist</span>
+                <h2 class="section-title">Serving Long Island & Manhattan</h2>
+                <p class="section-subtitle">
+                    With dedicated studios in Huntington and NYC, we bring bespoke, artistic arrangements directly to your doorstep with white-glove delivery service.
+                </p>
+
+                <div class="location-cards">
+                    <div class="loc-card">
+                        <i class="fas fa-store-alt"></i>
+                        <div>
+                            <h4>Huntington Studio</h4>
+                            <p>386 New York Avenue, NY 11743</p>
+                            <p class="phone">(631) 421-4410</p>
+                        </div>
+                    </div>
+                    <div class="loc-card">
+                        <i class="fas fa-city"></i>
+                        <div>
+                            <h4>Lexington Ave Studio</h4>
+                            <p>1677 Lexington Avenue, NY 10029</p>
+                            <p class="phone">(917) 455-8902</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="delivery-badge">
+                    <i class="fas fa-truck-fast"></i>
+                    <span>Same-Day Luxury Delivery Available</span>
+                </div>
+            </div>
+
+            <!-- Visual Content (Map or Local Image) -->
+            <div class="service-visual">
+                <div class="map-placeholder">
+                    <!-- You can replace this with an actual Google Maps Embed -->
+                    <div class="floating-card">
+                        <p><strong>Areas We Serve:</strong></p>
+                        <ul>
+                            <li>Huntington & North Shore</li>
+                            <li>Upper East Side & Manhattan</li>
+                            <li>All Five Boroughs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Browse by Occasions & Categories -->
+<section class="shop-grid-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="sub-heading">Artisan Collections</span>
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-tabs">
+                <button class="tab-btn active" data-filter="all">All</button>
+                <button class="tab-btn" data-filter="Anniversary">Anniversary</button>
+                <button class="tab-btn" data-filter="Sympathy">Sympathy</button>
+                <button class="tab-btn" data-filter="Congratulations">Congratulations</button>
+                <button class="tab-btn" data-filter="Plants & Gifts">Plants & Gifts</button>
+                <button class="tab-btn" data-filter="Weddings">Weddings</button>
+                <button class="tab-btn" data-filter="Birthday">Birthday</button>
+                <button class="tab-btn" data-filter="Get Well">Get Well</button>
+            </div>
+        </div>
+
+        <div class="product-grid">
+            <!-- 1-5: Anniversary -->
+            <div class="product-card" data-category="Anniversary">
+                <div class="product-image">
+                    <span class="badge-delivery"><i class="fas fa-bolt"></i> Same Day Delivery</span>
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p1.jpg' %}" alt="You Are My Heart"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Anniversary</div>
+                    <h3><a href="product-detail.html">You Are My Heart</a></h3>
+                    <span class="current-price">$64.99</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Anniversary">
+                <div class="product-image">
+                    <span class="badge-delivery"><i class="fas fa-bolt"></i> Same Day Delivery</span>
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p2.jpg' %}" alt="Everlasting Love"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Anniversary</div>
+                    <h3><a href="product-detail.html">Everlasting Love</a></h3>
+                    <span class="current-price">$79.99</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Anniversary">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p3.jpg' %}" alt="Crimson Romance"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Anniversary</div>
+                    <h3><a href="product-detail.html">Crimson Romance</a></h3>
+                    <span class="current-price">$55.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Anniversary">
+                <div class="product-image">
+                    <span class="badge-delivery"><i class="fas fa-bolt"></i> Same Day Delivery</span>
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p4.jpg' %}" alt="Midnight Orchid"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Anniversary</div>
+                    <h3><a href="product-detail.html">Midnight Orchid</a></h3>
+                    <span class="current-price">$92.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Anniversary">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p5.jpg' %}" alt="Golden Glow"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Anniversary</div>
+                    <h3><a href="product-detail.html">Golden Glow</a></h3>
+                    <span class="current-price">$68.50</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- 6-11: Sympathy -->
+            <div class="product-card" data-category="Sympathy">
+                <div class="product-image">
+                    <span class="badge-delivery"><i class="fas fa-bolt"></i> Same Day Delivery</span>
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p6.jpg' %}" alt="Graceful Tribute"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Sympathy</div>
+                    <h3><a href="product-detail.html">Graceful Tribute</a></h3>
+                    <span class="current-price">$89.99</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Sympathy">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p7.jpg' %}" alt="Serene Peace"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Sympathy</div>
+                    <h3><a href="product-detail.html">Serene Peace</a></h3>
+                    <span class="current-price">$75.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Sympathy">
+                <div class="product-image">
+                    <span class="badge-delivery"><i class="fas fa-bolt"></i> Same Day Delivery</span>
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p8.jpg' %}" alt="White Lilies"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Sympathy</div>
+                    <h3><a href="product-detail.html">White Lilies</a></h3>
+                    <span class="current-price">$62.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Sympathy">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p9.jpg' %}" alt="Eternal Rest"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Sympathy</div>
+                    <h3><a href="product-detail.html">Eternal Rest</a></h3>
+                    <span class="current-price">$110.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Sympathy">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p10.jpg' %}" alt="Quiet Strength"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Sympathy</div>
+                    <h3><a href="product-detail.html">Quiet Strength</a></h3>
+                    <span class="current-price">$85.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Sympathy">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p11.jpg' %}" alt="Memories in Bloom"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Sympathy</div>
+                    <h3><a href="product-detail.html">Memories in Bloom</a></h3>
+                    <span class="current-price">$72.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- 12-17: Congratulations -->
+            <div class="product-card" data-category="Congratulations">
+                <div class="product-image">
+                    <span class="badge-delivery"><i class="fas fa-bolt"></i> Same Day Delivery</span>
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p12.jpg' %}" alt="Success Spritz"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Congratulations</div>
+                    <h3><a href="product-detail.html">Success Spritz</a></h3>
+                    <span class="current-price">$58.99</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Congratulations">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p13.jpg' %}" alt="New Chapter"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Congratulations</div>
+                    <h3><a href="product-detail.html">New Chapter</a></h3>
+                    <span class="current-price">$65.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Congratulations">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p14.jpg' %}" alt="Bright Future"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Congratulations</div>
+                    <h3><a href="product-detail.html">Bright Future</a></h3>
+                    <span class="current-price">$49.99</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Congratulations">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p15.jpg' %}" alt="Rising Star"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Congratulations</div>
+                    <h3><a href="product-detail.html">Rising Star</a></h3>
+                    <span class="current-price">$78.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Congratulations">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p16.jpg' %}" alt="Cheer & Charm"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Congratulations</div>
+                    <h3><a href="product-detail.html">Cheer & Charm</a></h3>
+                    <span class="current-price">$52.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Congratulations">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p17.jpg' %}" alt="Grand Opening"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Congratulations</div>
+                    <h3><a href="product-detail.html">Grand Opening</a></h3>
+                    <span class="current-price">$125.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- 18-23: Plants & Gifts -->
+            <div class="product-card" data-category="Plants & Gifts">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p18.jpg' %}" alt="Lush Peace Lily"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Plants & Gifts</div>
+                    <h3><a href="product-detail.html">Lush Peace Lily</a></h3>
+                    <span class="current-price">$45.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Plants & Gifts">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p19.jpg' %}" alt="Snake Plant Duo"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Plants & Gifts</div>
+                    <h3><a href="product-detail.html">Snake Plant Duo</a></h3>
+                    <span class="current-price">$55.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Plants & Gifts">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p20.jpg' %}" alt="Deluxe Fruit Basket"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Plants & Gifts</div>
+                    <h3><a href="product-detail.html">Deluxe Fruit Basket</a></h3>
+                    <span class="current-price">$85.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Plants & Gifts">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p21.jpg' %}" alt="Spa Day Basket"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Plants & Gifts</div>
+                    <h3><a href="product-detail.html">Spa Day Basket</a></h3>
+                    <span class="current-price">$95.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Plants & Gifts">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p22.jpg' %}" alt="Succulent Garden"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Plants & Gifts</div>
+                    <h3><a href="product-detail.html">Succulent Garden</a></h3>
+                    <span class="current-price">$38.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Plants & Gifts">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p23.jpg' %}" alt="Bonsai Zen"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Plants & Gifts</div>
+                    <h3><a href="product-detail.html">Bonsai Zen</a></h3>
+                    <span class="current-price">$72.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- 24-29: Weddings -->
+            <div class="product-card" data-category="Weddings">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p24.jpg' %}" alt="Bridal Blush"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Weddings</div>
+                    <h3><a href="product-detail.html">Bridal Blush</a></h3>
+                    <span class="current-price">$150.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Weddings">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p25.jpg' %}" alt="Pure Ivory Centerpiece"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Weddings</div>
+                    <h3><a href="product-detail.html">Pure Ivory</a></h3>
+                    <span class="current-price">$85.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Weddings">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p26.jpg' %}" alt="Wildflower Vows"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Weddings</div>
+                    <h3><a href="product-detail.html">Wildflower Vows</a></h3>
+                    <span class="current-price">$120.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Weddings">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p27.jpg' %}" alt="Rustic Romance"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Weddings</div>
+                    <h3><a href="product-detail.html">Rustic Romance</a></h3>
+                    <span class="current-price">$98.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Weddings">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p28.jpg' %}" alt="Luxe Peony"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Weddings</div>
+                    <h3><a href="product-detail.html">Luxe Peony</a></h3>
+                    <span class="current-price">$180.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Weddings">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p29.jpg' %}" alt="Classic Corsage"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Weddings</div>
+                    <h3><a href="product-detail.html">Classic Corsage</a></h3>
+                    <span class="current-price">$35.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- 30-35: Birthday -->
+            <div class="product-card" data-category="Birthday">
+                <div class="product-image">
+                    <span class="badge-delivery"><i class="fas fa-bolt"></i> Same Day Delivery</span>
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p30.jpg' %}" alt="Party Pop"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Birthday</div>
+                    <h3><a href="product-detail.html">Party Pop</a></h3>
+                    <span class="current-price">$45.99</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Birthday">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p31.jpg' %}" alt="Sweet Sixteen"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Birthday</div>
+                    <h3><a href="product-detail.html">Sweet Sixteen</a></h3>
+                    <span class="current-price">$58.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Birthday">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p32.jpg' %}" alt="Rainbow Delight"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Birthday</div>
+                    <h3><a href="product-detail.html">Rainbow Delight</a></h3>
+                    <span class="current-price">$65.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Birthday">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p33.jpg' %}" alt="Confetti Bloom"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Birthday</div>
+                    <h3><a href="product-detail.html">Confetti Bloom</a></h3>
+                    <span class="current-price">$42.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Birthday">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p34.jpg' %}" alt="Cheerful Day"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Birthday</div>
+                    <h3><a href="product-detail.html">Cheerful Day</a></h3>
+                    <span class="current-price">$50.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Birthday">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p35.jpg' %}" alt="Elegant Age"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Birthday</div>
+                    <h3><a href="product-detail.html">Elegant Age</a></h3>
+                    <span class="current-price">$75.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- 36-40: Get Well -->
+            <div class="product-card" data-category="Get Well">
+                <div class="product-image">
+                    <span class="badge-delivery"><i class="fas fa-bolt"></i> Same Day Delivery</span>
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p36.jpg' %}" alt="Sunny Recovery"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Get Well</div>
+                    <h3><a href="product-detail.html">Sunny Recovery</a></h3>
+                    <span class="current-price">$48.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Get Well">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p37.jpg' %}" alt="Citrus Cheer"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Get Well</div>
+                    <h3><a href="product-detail.html">Citrus Cheer</a></h3>
+                    <span class="current-price">$42.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Get Well">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p38.jpg' %}" alt="Healing Vibes"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Get Well</div>
+                    <h3><a href="product-detail.html">Healing Vibes</a></h3>
+                    <span class="current-price">$55.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Get Well">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p39.jpg' %}" alt="Breathe Easy"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Get Well</div>
+                    <h3><a href="product-detail.html">Breathe Easy</a></h3>
+                    <span class="current-price">$60.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="Get Well">
+                <div class="product-image">
+                    <button class="btn-wishlist" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <a href="product-detail.html"><img src="{% static 'images/p40.jpg' %}" alt="Warm Wishes"></a>
+                </div>
+                <div class="product-info">
+                    <div class="category-label">Get Well</div>
+                    <h3><a href="product-detail.html">Warm Wishes</a></h3>
+                    <span class="current-price">$45.00</span>
+                    <button class="btn-add-cart"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cross-Sell / Bundle Section -->
+<section class="bundle-container">
+    <h2 class="bundle-title">Complete the Gift</h2>
+    <p class="bundle-subtitle">People who ordered this also added these essentials.</p>
+
+    <div class="bundle-grid">
+        <!-- Item 1 -->
+        <div class="bundle-item">
+            <div class="bundle-img">
+                <img src="{% static 'images/glass-vase.jpg' %}" alt="Clear Glass Vase">
+            </div>
+            <div class="bundle-details">
+                <span class="bundle-tag">Upgrade</span>
+                <h4>Signature Glass Vase</h4>
+                <p class="bundle-price">+$12.99</p>
+                <label class="add-checkbox">
+                    <input type="checkbox" name="addon_vase">
+                    <span class="checkmark"></span> Add to order
+                </label>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bundle-item">
+            <div class="bundle-img">
+                <img src="{% static 'images/greeting-card.jpg' %}" alt="Handwritten Card">
+            </div>
+            <div class="bundle-details">
+                <span class="bundle-tag">Personalize</span>
+                <h4>Handwritten Greeting Card</h4>
+                <p class="bundle-price">+$5.00</p>
+                <label class="add-checkbox">
+                    <input type="checkbox" name="addon_card">
+                    <span class="checkmark"></span> Add to order
+                </label>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bundle-item">
+            <div class="bundle-img">
+                <img src="{% static 'images/flower-food.jpg' %}" alt="Flower Care Kit">
+            </div>
+            <div class="bundle-details">
+                <span class="bundle-tag">Essential</span>
+                <h4>Long-Life Flower Food</h4>
+                <p class="bundle-price">+$3.50</p>
+                <label class="add-checkbox">
+                    <input type="checkbox" name="addon_food">
+                    <span class="checkmark"></span> Add to order
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="best-selling-section">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="sub-title">Handpicked Favorites</span>
+            <h2 class="main-title">Shop Best Selling Flowers & Gifts</h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <div class="best-seller-grid">
+            {% for product in products %}
+                {% if product.is_best_seller %}
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <a href="{% url 'product_detail' product.slug %}">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy">
+                        </a>
+                        
+                        <!-- Status Badges -->
+                        <div class="badge-group">
+                            <span class="card-badge">Best Seller</span>
+                            {% if not product.pet_friendly %}
+                                <span class="card-badge warning"><i class="fas fa-paw"></i></span>
+                            {% endif %}
+                        </div>
+
+                        <!-- Quick Action Overlay -->
+                        <div class="quick-view-overlay">
+                            <a href="{% url 'product_detail' product.slug %}" class="btn-quick-circle" title="View Details">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <form action="{% url 'add_to_cart' product.id %}" method="POST" style="display:inline;">
+                                {% csrf_token %}
+                                <input type="hidden" name="tier" value="regular"> <!-- Default to regular -->
+                                <button type="submit" class="btn-quick-circle" title="Instant Add">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <span class="category-label">{{ product.category.name }}</span>
+                        <h3 class="product-name">
+                            <a href="{% url 'product_detail' product.slug %}">{{ product.name }}</a>
+                        </h3>
+                        <div class="price-box">
+                            <span class="was-price">${{ product.price_regular_srp }}</span>
+                            <span class="now-price">${{ product.price_regular_current }}</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="review-count">(48)</span>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="occasions-section">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="sub-title">Celebrate Every Moment</span>
+            <h2 class="main-title">Flowers for Every Occasion</h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <div class="occasion-grid">
+            <!-- Occasion 1: Large Feature -->
+            <div class="occasion-card tall">
+                <img src="{% static 'images/birthday-flowers.jpg' %}" alt="Birthday Flowers">
+                <div class="occasion-overlay">
+                    <h3>Birthday</h3>
+                    <p>Make their day brighter</p>
+                    <a href="/category/birthday/" class="btn-link">Shop Collection</a>
+                </div>
+            </div>
+
+            <!-- Occasion 2: Small -->
+            <div class="occasion-card">
+                <img src="{% static 'images/anniversary.jpg' %}" alt="Anniversary">
+                <div class="occasion-overlay">
+                    <h3>Anniversary</h3>
+                    <a href="/category/anniversary/" class="btn-link">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Occasion 3: Small -->
+            <div class="occasion-card">
+                <img src="{% static 'images/sympathy.jpg' %}" alt="Sympathy">
+                <div class="occasion-overlay">
+                    <h3>Sympathy</h3>
+                    <a href="/category/sympathy/" class="btn-link">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Occasion 4: Wide Feature -->
+            <div class="occasion-card wide">
+                <img src="{% static 'images/love-romance.jpg' %}" alt="Love & Romance">
+                <div class="occasion-overlay">
+                    <h3>Love & Romance</h3>
+                    <p>Express your deepest feelings</p>
+                    <a href="/category/romance/" class="btn-link">View All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Promo Section -->
+<section style="background: var(--secondary); padding: 80px 5%; text-align: center;">
+    <h2 style="font-size: 2.8rem; margin-bottom: 20px;">Floral Design Classes</h2>
+    <p style="max-width: 600px; margin: 0 auto 30px;">Unleash your creativity in our Huntington studio. Join our master florists for a hands-on experience.</p>
+    <a href="#" class="btn-rose">Book a Workshop</a>
+</section>
+
+<section class="journal-section">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="sub-title">Expert Advice</span>
+            <h2 class="main-title">The Floral Journal</h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <div class="journal-grid">
+            <!-- Article 1 -->
+            <article class="journal-card">
+                <div class="journal-img">
+                    <img src="{% static 'images/blog-1.jpg' %}" alt="Flower Care Tips">
+                    <div class="date-tag">May 15, 2026</div>
+                </div>
+                <div class="journal-body">
+                    <span class="blog-cat">Tips & Care</span>
+                    <h3>How to Make Your Roses Last Twice as Long</h3>
+                    <p>Discover the professional secrets to keeping your bouquets vibrant and fresh for over a week...</p>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="journal-card">
+                <div class="journal-img">
+                    <img src="{% static 'images/blog-2.jpg' %}" alt="Wedding Trends">
+                    <div class="date-tag">May 10, 2026</div>
+                </div>
+                <div class="journal-body">
+                    <span class="blog-cat">Design</span>
+                    <h3>2026 Wedding Floral Trends: The New Romance</h3>
+                    <p>Explore the shift toward textured, wildflower-inspired arrangements and deep jewel tones...</p>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="journal-card">
+                <div class="journal-img">
+                    <img src="{% static 'images/blog-3.jpg' %}" alt="Seasonal Blooms">
+                    <div class="date-tag">May 05, 2026</div>
+                </div>
+                <div class="journal-body">
+                    <span class="blog-cat">Seasonal</span>
+                    <h3>The Best Blooms for Your Spring Celebration</h3>
+                    <p>From peonies to ranunculus, we highlight the most stunning flowers available this season...</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="subscription-section">
+    <div class="section-container">
+        <div class="subscription-wrapper">
+            <!-- Left Side: Immersive Image -->
+            <div class="subscription-image">
+                <img src="{% static 'images/luxury-subscription.jpg' %}" alt="Floral Subscription">
+                <div class="image-overlay-text">
+                    <span class="est-tag">Est. 2026</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Glassmorphism Content Card -->
+            <div class="subscription-content">
+                <div class="content-inner">
+                    <span class="sub-title">The Curated Life</span>
+                    <h2 class="main-title">Luxury Floral Subscriptions</h2>
+                    <div class="title-divider"></div>
+                    
+                    <p class="subscription-desc">
+                        Bring the season's finest blooms into your home or office on a schedule that suits you. 
+                        Our master florists curate exclusive arrangements delivered weekly or monthly.
+                    </p>
+
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check"></i> Hand-picked seasonal rarities</li>
+                        <li><i class="fas fa-check"></i> Complimentary artisan vase with first delivery</li>
+                        <li><i class="fas fa-check"></i> Flexible scheduling & easy pause</li>
+                    </ul>
+
+                    <div class="subscription-action">
+                        <a href="/subscriptions/" class="btn-primary-gold">Explore Memberships</a>
+                        <span class="price-start">Starting at $65 / delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="contact-bg-pattern"></div> <!-- Floral Pattern Overlay -->
+    
+    <div class="section-container">
+        <div class="contact-wrapper">
+            <!-- Left Side: Contact Info -->
+            <div class="contact-info-panel">
+                <span class="sub-title" style="color: var(--gold);">Get In Touch</span>
+                <h2 class="main-title" style="color: var(--white); margin-bottom: 20px;">Visit Our Studio</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-text">
+                        <h4>Location</h4>
+                        <p>386 New York Avenue<br>Huntington, NY 11743</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info-text">
+                        <h4>Call Us</h4>
+                        <p>+1 631-421-4410</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h4>Email</h4>
+                        <p>funkyflowershop@yahoo.com</p>
+                    </div>
+                </div>
+
+                <div class="social-connect">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/thefunkyflowershop/"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="contact-form-panel">
+                <form id="contactForm" class="aesthetic-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="e.g. Jane Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="e.g. jane@example.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <select>
+                            <option>General Inquiry</option>
+                            <option>Wedding & Events</option>
+                            <option>Subscription Help</option>
+                            <option>Custom Arrangement</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="How can we help you today?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

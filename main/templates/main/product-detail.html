@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    :root {
+        --primary: #7A284B; --secondary: #F7D9E3; --accent: #D89CAE;
+        --background: #FFF8FA; --text-dark: #1F1F1F; --text-soft: #666666;
+        --gold: #D6B98C; --white: #ffffff; --glass: rgba(255, 248, 250, 0.85);
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .detail-wrapper { max-width: 1300px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; }
+    .product-visuals { position: sticky; top: 20px; height: fit-content; }
+    .main-img-container { background: var(--white); border: 1px solid var(--secondary); padding: 10px; position: relative; overflow: hidden; }
+    .main-img-container img { width: 100%; height: auto; display: block; transition: var(--transition); }
+    .badge-float { position: absolute; top: 20px; left: 20px; background: var(--primary); color: var(--white); padding: 8px 15px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .product-title { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--primary); line-height: 1.1; margin-bottom: 10px; }
+    .item-sku { font-size: 0.8rem; color: var(--text-soft); margin-bottom: 20px; display: block; }
+    .option-grid { display: grid; gap: 12px; margin: 25px 0; }
+    .option-card { border: 1px solid var(--secondary); background: var(--white); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: var(--transition); position: relative; }
+    .option-card input { position: absolute; opacity: 0; }
+    .option-card.active { border-color: var(--primary); background: var(--glass); box-shadow: 0 4px 15px rgba(122, 40, 75, 0.1); }
+    .price-details .tier-name { font-weight: 700; display: block; color: var(--primary); }
+    .price-details .srp-price { text-decoration: line-through; color: var(--text-soft); font-size: 0.85rem; }
+    .price-details .current-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-left: 8px; }
+    .special-header { margin: 40px 0 20px; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--primary); border-bottom: 1px solid var(--secondary); padding-bottom: 10px; }
+    .addon-row { background: var(--white); border: 1px dotted var(--accent); padding: 15px; margin-bottom: 15px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 15px; }
+    .delivery-box { background: var(--primary); color: var(--white); padding: 25px; margin-top: 30px; }
+    .btn-checkout { width: 100%; background: var(--gold); color: var(--text-dark); border: none; padding: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-top: 20px; cursor: pointer; transition: var(--transition); }
+    .includes-list { list-style: none; }
+    .includes-list li { margin-bottom: 8px; padding-left: 20px; position: relative; }
+    .includes-list li::before { content: '◈'; position: absolute; left: 0; color: var(--gold); }
+</style>
+
+<div class="detail-wrapper">
+    <div class="product-visuals">
+        <div class="main-img-container">
+            {% if product.is_best_seller %}<span class="badge-float">Best Seller</span>{% endif %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        </div>
+        {% if not product.pet_friendly %}
+        <div class="pet-safety" style="margin-top: 20px; padding: 15px; border-left: 4px solid #f44336; background: #ffebee;">
+            <small><strong>Pet Safety:</strong> This bouquet may include flowers toxic to pets.</small>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="product-content">
+        <span class="item-sku">Item #{{ product.sku }}</span>
+        <h1 class="product-title">{{ product.name }}</h1>
+        
+        <form method="POST" action="{% url 'add_to_cart' %}">
+            {% csrf_token %}
+            <h3 class="special-header" style="margin-top: 0;">1. Select Your Options</h3>
+            <div class="option-grid">
+                <label class="option-card active">
+                    <input type="radio" name="tier" value="regular" checked>
+                    <div class="price-details">
+                        <span class="tier-name">Regular Arrangement</span>
+                        <span class="srp-price">SRP ${{ product.price_regular_srp }}</span>
+                        <span class="current-price">${{ product.price_regular_current }}</span>
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                </label>
+                <label class="option-card">
+                    <input type="radio" name="tier" value="deluxe">
+                    <div class="price-details">
+                        <span class="tier-name">Deluxe Arrangement</span>
+                        <span class="srp-price">SRP ${{ product.price_deluxe_srp }}</span>
+                        <span class="current-price">${{ product.price_deluxe_current }}</span>
+                    </div>
+                    <i class="far fa-circle"></i>
+                </label>
+            </div>
+
+            <h3 class="special-header">2. Make It Special</h3>
+            <!-- Add-ons logic... -->
+
+            <div class="delivery-box">
+                <label>Recipient's Zip Code</label>
+                <input type="text" name="zip_code" placeholder="Enter Zip Code" required style="width:100%; padding:10px; margin-top:5px;">
+            </div>
+
+            <button type="submit" class="btn-checkout">Add To Shopping Bag</button>
+        </form>
+    </div>
+</div>
+
+<div class="detail-wrapper" style="border-top: 1px solid var(--secondary); margin-top: 0;">
+    <div class="full-description">
+        <h3 class="special-header">Description</h3>
+        <p>{{ product.description }}</p>
+        <h4 style="color: var(--primary); margin: 20px 0 10px;">Includes:</h4>
+        <ul class="includes-list">
+            {% for item in product.get_includes_items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<script>
+    const cards = document.querySelectorAll('.option-card');
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            cards.forEach(c => {
+                c.classList.remove('active');
+                c.querySelector('i').className = 'far fa-circle';
+            });
+            this.classList.add('active');
+            this.querySelector('i').className = 'fas fa-check-circle';
+            this.querySelector('input').checked = true;
+        });
+    });
+</script>
+{% endblock %}
